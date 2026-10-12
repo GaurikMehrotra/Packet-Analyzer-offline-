@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools==75.8.2", "wheel==0.45.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pcaplens"
+version = "0.1.0"
+description = "Bounded offline packet metadata analysis with hand-written parsers"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = ["typer==0.15.2", "click==8.1.8", "rich==13.9.4", "pydantic==2.10.6", "PyYAML==6.0.2", "matplotlib==3.10.1", "psutil==7.0.0"]
+
+[project.optional-dependencies]
+dev = ["pytest==8.3.5", "hypothesis==6.129.4", "ruff==0.11.0", "mypy==1.15.0", "scapy==2.6.1", "dpkt==1.9.8", "types-PyYAML==6.0.12.20241230", "types-psutil==7.0.0.20250218"]
+
+[project.scripts]
+pcaplens = "pcaplens.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+files = ["src/pcaplens"]
+
+[[tool.mypy.overrides]]
+module = ["matplotlib.*"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["oracle: optional tshark offline reference checks"]

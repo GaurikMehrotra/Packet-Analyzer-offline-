@@ -1,0 +1,41 @@
+{
+  "dns_questions": [
+    "synthetic.test",
+    "synthetic.test",
+    "fragment.test"
+  ],
+  "hashes": {
+    "block-mismatch.pcapng": "24e19f0282a2f8aa4e2d1876362025c904732ea038f0fabb08d428bef08e5391",
+    "dns-loop.pcap": "f40862597e41c72b03dac13cf74f6c55c1307d158960c3c9779bfa2e7bb88663",
+    "huge-length.pcap": "82edcdfa76200b619ce5f90cebb11a0f35c38d9e7b44694398446075b372b557",
+    "interfaces-be.pcapng": "71ea8a01cf9be1c1e17be3af8f227719b5c8ab398f46236c286816c895b70317",
+    "interfaces-le.pcapng": "5edc53e5bd91c7609cdc05ead62544654d825a928d4a226f8a7e9e7e3f02d0be",
+    "protocols-be-ns.pcap": "2ff994bec491cee03518b049776629b4e48bb7c803074fb84378fd608cd4a5ba",
+    "protocols-be-us.pcap": "340d7458cfeeba9cbbb6c9d4bce3cd644aa3a5bf001e433b6e873d4695396c5c",
+    "protocols-le-ns.pcap": "b92d18b9a924e5a6e40f8b6a2f883697cb0cbca3ec3d765080b90427825eaa02",
+    "protocols-le-us.pcap": "9f4fb93cb52c44da4774ae29361730c96b053c069ea0471259c40589fe1d2576",
+    "raw-ip.pcap": "aef62c05b534d44637c66cf991afcf5fc883fd6aa4e258764c1eb100a0f9d90b",
+    "reassembly.pcap": "55facff4f90835e358a6877937171a32d20d77d43f1aba5147e3810a0192f7b5",
+    "sll.pcap": "0254929c57e78dfe2b037ae9e33a4f07999022466b6899d8d6b5a5244968ce3d",
+    "tls.pcap": "ce5f10bcebcb755a280471540feb1c06ca0f3c22a8806fc95435e5a897f0cf93",
+    "truncated.pcap": "1e6e4291628cca098d1bb4da9e777099fe485f7ddde7df8e2322e8b99d34d303",
+    "unsupported.pcap": "ec5e2f22f5d60f40019ff1529a63a70d03909e9791905182755a824f68484975",
+    "wraparound.pcap": "2b5491e6aa1353d554612d1163ff94d15ff10d7fde7ce5d1e5d5cffd52fd06aa",
+    "wrong-endian.pcap": "43ff1ee550378ce723b70c694aa9ff69110c514444c424dd28111fa3708ff7ac"
+  },
+  "http_requests": [
+    {
+      "method": "GET",
+      "url": "/demo?token=synthetic-only"
+    }
+  ],
+  "protocols_packets": 14,
+  "reassembly": {
+    "a_to_b_hex": "4142434445464748494a4b4c4d4e4f",
+    "b_to_a_hex": "58595a"
+  },
+  "seed": 0,
+  "synthetic": true,
+  "tls_sni": "synthetic.test",
+  "wraparound_hex": "41424344"
+}

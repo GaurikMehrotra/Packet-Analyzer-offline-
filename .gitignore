@@ -1,0 +1,35 @@
+# Local environments and generated artifacts
+.venv/
+.cache/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.hypothesis/
+.ruff_cache/
+.mypy_cache/
+build/
+dist/
+*.egg-info/
+.coverage
+htmlcov/
+.env
+.env.*
+!.env.example
+samples/
+results/
+reports/
+
+# Capture extensions are case-insensitive. Only reviewed synthetic fixtures
+# may bypass these rules. Gitignore cannot identify captures renamed as .bin.
+*.[pP][cC][aA][pP]
+*.[pP][cC][aA][pP][nN][gG]
+*.[cC][aA][pP]
+*.[pP][cC][aA][pP].[gG][zZ]
+*.[pP][cC][aA][pP][nN][gG].[gG][zZ]
+*.[cC][aA][pP].[gG][zZ]
+!/fixtures/**/*.[pP][cC][aA][pP]
+!/fixtures/**/*.[pP][cC][aA][pP][nN][gG]
+!/fixtures/**/*.[cC][aA][pP]
+!/fixtures/**/*.[pP][cC][aA][pP].[gG][zZ]
+!/fixtures/**/*.[pP][cC][aA][pP][nN][gG].[gG][zZ]
+!/fixtures/**/*.[cC][aA][pP].[gG][zZ]

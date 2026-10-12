@@ -1,0 +1,1587 @@
+{
+  "captures": [
+    {
+      "checks": [
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "packet_count"
+        },
+        {
+          "agreed": 11,
+          "agreement_percent": 100.0,
+          "compared": 11,
+          "differences": [],
+          "field": "protocol_counts"
+        },
+        {
+          "agreed": 12,
+          "agreement_percent": 85.71428571428571,
+          "compared": 14,
+          "differences": [
+            {
+              "explanation": "tshark exposes the payloads of two non-final IPv4 fragments as data. pcaplens records IPv4 and buffers them until the datagram completes; it has no opaque data layer.",
+              "key": "ethernet/ipv4/data",
+              "pcaplens": null,
+              "status": "verified_scope_difference",
+              "tshark": 2
+            },
+            {
+              "explanation": "tshark's frame.protocols adds data for the five-byte synthetic HTTP response body. pcaplens retains its length and SHA-256 under HTTP metadata rather than creating a body-protocol hierarchy node.",
+              "key": "ethernet/ipv4/tcp/http/data",
+              "pcaplens": null,
+              "status": "verified_scope_difference",
+              "tshark": 1
+            }
+          ],
+          "field": "protocol_hierarchy"
+        },
+        {
+          "agreed": 3,
+          "agreement_percent": 100.0,
+          "compared": 3,
+          "differences": [],
+          "field": "conversation_packets"
+        },
+        {
+          "agreed": 3,
+          "agreement_percent": 100.0,
+          "compared": 3,
+          "differences": [],
+          "field": "conversation_bytes"
+        },
+        {
+          "agreed": 3,
+          "agreement_percent": 100.0,
+          "compared": 3,
+          "differences": [],
+          "field": "conversation_captured_bytes"
+        },
+        {
+          "agreed": 2,
+          "agreement_percent": 100.0,
+          "compared": 2,
+          "differences": [],
+          "field": "dns_queries"
+        },
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "dns_a_answers"
+        },
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "http_requests"
+        },
+        {
+          "agreed": 3,
+          "agreement_percent": 100.0,
+          "compared": 3,
+          "differences": [],
+          "field": "conversation_table_packets"
+        },
+        {
+          "agreed": 3,
+          "agreement_percent": 100.0,
+          "compared": 3,
+          "differences": [],
+          "field": "conversation_table_exact_bytes"
+        }
+      ],
+      "conversation_table_rounded_byte_rows_unmeasured": 0,
+      "file": "protocols-le-us.pcap",
+      "reference_normalization": {
+        "aliases_and_transparent_layers": {
+          "eth": "ethernet",
+          "ethertype": null,
+          "ip": "ipv4",
+          "ipv6.hopopts": null,
+          "raw": null
+        },
+        "consecutive_duplicate_layers": "collapsed",
+        "counts": "packets containing a layer, not repeated record occurrences"
+      },
+      "reference_tables": [
+        "================================================================================",
+        "UDP Conversations",
+        "Filter:<No Filter>",
+        "                                                           |       <-      | |       ->      | |     Total     |    Relative    |   Duration   |",
+        "                                                           | Frames  Bytes | | Frames  Bytes | | Frames  Bytes |      Start     |              |",
+        "192.0.2.10:53000           <-> 198.51.100.20:53                 1 104 bytes       1 74 bytes        2 178 bytes     0.000000000         0.1000",
+        "192.0.2.10:53001           <-> 198.51.100.20:53                 0 0 bytes         1 41 bytes        1 41 bytes      1.300000000         0.0000",
+        "================================================================================",
+        "================================================================================",
+        "TCP Conversations",
+        "Filter:<No Filter>",
+        "                                                           |       <-      | |       ->      | |     Total     |    Relative    |   Duration   |",
+        "                                                           | Frames  Bytes | | Frames  Bytes | | Frames  Bytes |      Start     |              |",
+        "192.0.2.10:12345           <-> 198.51.100.20:80                 2 151 bytes       4 343 bytes       6 494 bytes     0.200000000         0.5000",
+        "================================================================================",
+        "",
+        "===================================================================",
+        "Protocol Hierarchy Statistics",
+        "Filter: ",
+        "",
+        "eth                                      frames:14 bytes:971",
+        "  ip                                     frames:11 bytes:813",
+        "    udp                                  frames:3 bytes:219",
+        "      dns                                frames:3 bytes:219",
+        "    tcp                                  frames:6 bytes:494",
+        "      http                               frames:2 bytes:278",
+        "    data                                 frames:2 bytes:100",
+        "  vlan                                   frames:1 bytes:46",
+        "    ip                                   frames:1 bytes:46",
+        "      icmp                               frames:1 bytes:46",
+        "  arp                                    frames:1 bytes:42",
+        "  ipv6                                   frames:1 bytes:70",
+        "    icmpv6                               frames:1 bytes:70",
+        "==================================================================="
+      ],
+      "streams": [
+        {
+          "direction": 0,
+          "equal": true,
+          "explanation": null,
+          "reference_bytes": 127,
+          "stream": 0
+        },
+        {
+          "direction": 1,
+          "equal": true,
+          "explanation": null,
+          "reference_bytes": 43,
+          "stream": 0
+        }
+      ],
+      "warnings": {
+        "count": 0,
+        "items": [],
+        "suppressed": 0
+      }
+    },
+    {
+      "checks": [
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "packet_count"
+        },
+        {
+          "agreed": 11,
+          "agreement_percent": 100.0,
+          "compared": 11,
+          "differences": [],
+          "field": "protocol_counts"
+        },
+        {
+          "agreed": 12,
+          "agreement_percent": 85.71428571428571,
+          "compared": 14,
+          "differences": [
+            {
+              "explanation": "tshark exposes the payloads of two non-final IPv4 fragments as data. pcaplens records IPv4 and buffers them until the datagram completes; it has no opaque data layer.",
+              "key": "ethernet/ipv4/data",
+              "pcaplens": null,
+              "status": "verified_scope_difference",
+              "tshark": 2
+            },
+            {
+              "explanation": "tshark's frame.protocols adds data for the five-byte synthetic HTTP response body. pcaplens retains its length and SHA-256 under HTTP metadata rather than creating a body-protocol hierarchy node.",
+              "key": "ethernet/ipv4/tcp/http/data",
+              "pcaplens": null,
+              "status": "verified_scope_difference",
+              "tshark": 1
+            }
+          ],
+          "field": "protocol_hierarchy"
+        },
+        {
+          "agreed": 3,
+          "agreement_percent": 100.0,
+          "compared": 3,
+          "differences": [],
+          "field": "conversation_packets"
+        },
+        {
+          "agreed": 3,
+          "agreement_percent": 100.0,
+          "compared": 3,
+          "differences": [],
+          "field": "conversation_bytes"
+        },
+        {
+          "agreed": 3,
+          "agreement_percent": 100.0,
+          "compared": 3,
+          "differences": [],
+          "field": "conversation_captured_bytes"
+        },
+        {
+          "agreed": 2,
+          "agreement_percent": 100.0,
+          "compared": 2,
+          "differences": [],
+          "field": "dns_queries"
+        },
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "dns_a_answers"
+        },
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "http_requests"
+        },
+        {
+          "agreed": 3,
+          "agreement_percent": 100.0,
+          "compared": 3,
+          "differences": [],
+          "field": "conversation_table_packets"
+        },
+        {
+          "agreed": 3,
+          "agreement_percent": 100.0,
+          "compared": 3,
+          "differences": [],
+          "field": "conversation_table_exact_bytes"
+        }
+      ],
+      "conversation_table_rounded_byte_rows_unmeasured": 0,
+      "file": "protocols-be-us.pcap",
+      "reference_normalization": {
+        "aliases_and_transparent_layers": {
+          "eth": "ethernet",
+          "ethertype": null,
+          "ip": "ipv4",
+          "ipv6.hopopts": null,
+          "raw": null
+        },
+        "consecutive_duplicate_layers": "collapsed",
+        "counts": "packets containing a layer, not repeated record occurrences"
+      },
+      "reference_tables": [
+        "================================================================================",
+        "UDP Conversations",
+        "Filter:<No Filter>",
+        "                                                           |       <-      | |       ->      | |     Total     |    Relative    |   Duration   |",
+        "                                                           | Frames  Bytes | | Frames  Bytes | | Frames  Bytes |      Start     |              |",
+        "192.0.2.10:53000           <-> 198.51.100.20:53                 1 104 bytes       1 74 bytes        2 178 bytes     0.000000000         0.1000",
+        "192.0.2.10:53001           <-> 198.51.100.20:53                 0 0 bytes         1 41 bytes        1 41 bytes      1.300000000         0.0000",
+        "================================================================================",
+        "================================================================================",
+        "TCP Conversations",
+        "Filter:<No Filter>",
+        "                                                           |       <-      | |       ->      | |     Total     |    Relative    |   Duration   |",
+        "                                                           | Frames  Bytes | | Frames  Bytes | | Frames  Bytes |      Start     |              |",
+        "192.0.2.10:12345           <-> 198.51.100.20:80                 2 151 bytes       4 343 bytes       6 494 bytes     0.200000000         0.5000",
+        "================================================================================",
+        "",
+        "===================================================================",
+        "Protocol Hierarchy Statistics",
+        "Filter: ",
+        "",
+        "eth                                      frames:14 bytes:971",
+        "  ip                                     frames:11 bytes:813",
+        "    udp                                  frames:3 bytes:219",
+        "      dns                                frames:3 bytes:219",
+        "    tcp                                  frames:6 bytes:494",
+        "      http                               frames:2 bytes:278",
+        "    data                                 frames:2 bytes:100",
+        "  vlan                                   frames:1 bytes:46",
+        "    ip                                   frames:1 bytes:46",
+        "      icmp                               frames:1 bytes:46",
+        "  arp                                    frames:1 bytes:42",
+        "  ipv6                                   frames:1 bytes:70",
+        "    icmpv6                               frames:1 bytes:70",
+        "==================================================================="
+      ],
+      "streams": [
+        {
+          "direction": 0,
+          "equal": true,
+          "explanation": null,
+          "reference_bytes": 127,
+          "stream": 0
+        },
+        {
+          "direction": 1,
+          "equal": true,
+          "explanation": null,
+          "reference_bytes": 43,
+          "stream": 0
+        }
+      ],
+      "warnings": {
+        "count": 0,
+        "items": [],
+        "suppressed": 0
+      }
+    },
+    {
+      "checks": [
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "packet_count"
+        },
+        {
+          "agreed": 11,
+          "agreement_percent": 100.0,
+          "compared": 11,
+          "differences": [],
+          "field": "protocol_counts"
+        },
+        {
+          "agreed": 12,
+          "agreement_percent": 85.71428571428571,
+          "compared": 14,
+          "differences": [
+            {
+              "explanation": "tshark exposes the payloads of two non-final IPv4 fragments as data. pcaplens records IPv4 and buffers them until the datagram completes; it has no opaque data layer.",
+              "key": "ethernet/ipv4/data",
+              "pcaplens": null,
+              "status": "verified_scope_difference",
+              "tshark": 2
+            },
+            {
+              "explanation": "tshark's frame.protocols adds data for the five-byte synthetic HTTP response body. pcaplens retains its length and SHA-256 under HTTP metadata rather than creating a body-protocol hierarchy node.",
+              "key": "ethernet/ipv4/tcp/http/data",
+              "pcaplens": null,
+              "status": "verified_scope_difference",
+              "tshark": 1
+            }
+          ],
+          "field": "protocol_hierarchy"
+        },
+        {
+          "agreed": 3,
+          "agreement_percent": 100.0,
+          "compared": 3,
+          "differences": [],
+          "field": "conversation_packets"
+        },
+        {
+          "agreed": 3,
+          "agreement_percent": 100.0,
+          "compared": 3,
+          "differences": [],
+          "field": "conversation_bytes"
+        },
+        {
+          "agreed": 3,
+          "agreement_percent": 100.0,
+          "compared": 3,
+          "differences": [],
+          "field": "conversation_captured_bytes"
+        },
+        {
+          "agreed": 2,
+          "agreement_percent": 100.0,
+          "compared": 2,
+          "differences": [],
+          "field": "dns_queries"
+        },
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "dns_a_answers"
+        },
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "http_requests"
+        },
+        {
+          "agreed": 3,
+          "agreement_percent": 100.0,
+          "compared": 3,
+          "differences": [],
+          "field": "conversation_table_packets"
+        },
+        {
+          "agreed": 3,
+          "agreement_percent": 100.0,
+          "compared": 3,
+          "differences": [],
+          "field": "conversation_table_exact_bytes"
+        }
+      ],
+      "conversation_table_rounded_byte_rows_unmeasured": 0,
+      "file": "protocols-le-ns.pcap",
+      "reference_normalization": {
+        "aliases_and_transparent_layers": {
+          "eth": "ethernet",
+          "ethertype": null,
+          "ip": "ipv4",
+          "ipv6.hopopts": null,
+          "raw": null
+        },
+        "consecutive_duplicate_layers": "collapsed",
+        "counts": "packets containing a layer, not repeated record occurrences"
+      },
+      "reference_tables": [
+        "================================================================================",
+        "UDP Conversations",
+        "Filter:<No Filter>",
+        "                                                           |       <-      | |       ->      | |     Total     |    Relative    |   Duration   |",
+        "                                                           | Frames  Bytes | | Frames  Bytes | | Frames  Bytes |      Start     |              |",
+        "192.0.2.10:53000           <-> 198.51.100.20:53                 1 104 bytes       1 74 bytes        2 178 bytes     0.000000000         0.1000",
+        "192.0.2.10:53001           <-> 198.51.100.20:53                 0 0 bytes         1 41 bytes        1 41 bytes      1.300000000         0.0000",
+        "================================================================================",
+        "================================================================================",
+        "TCP Conversations",
+        "Filter:<No Filter>",
+        "                                                           |       <-      | |       ->      | |     Total     |    Relative    |   Duration   |",
+        "                                                           | Frames  Bytes | | Frames  Bytes | | Frames  Bytes |      Start     |              |",
+        "192.0.2.10:12345           <-> 198.51.100.20:80                 2 151 bytes       4 343 bytes       6 494 bytes     0.200000000         0.5000",
+        "================================================================================",
+        "",
+        "===================================================================",
+        "Protocol Hierarchy Statistics",
+        "Filter: ",
+        "",
+        "eth                                      frames:14 bytes:971",
+        "  ip                                     frames:11 bytes:813",
+        "    udp                                  frames:3 bytes:219",
+        "      dns                                frames:3 bytes:219",
+        "    tcp                                  frames:6 bytes:494",
+        "      http                               frames:2 bytes:278",
+        "    data                                 frames:2 bytes:100",
+        "  vlan                                   frames:1 bytes:46",
+        "    ip                                   frames:1 bytes:46",
+        "      icmp                               frames:1 bytes:46",
+        "  arp                                    frames:1 bytes:42",
+        "  ipv6                                   frames:1 bytes:70",
+        "    icmpv6                               frames:1 bytes:70",
+        "==================================================================="
+      ],
+      "streams": [
+        {
+          "direction": 0,
+          "equal": true,
+          "explanation": null,
+          "reference_bytes": 127,
+          "stream": 0
+        },
+        {
+          "direction": 1,
+          "equal": true,
+          "explanation": null,
+          "reference_bytes": 43,
+          "stream": 0
+        }
+      ],
+      "warnings": {
+        "count": 0,
+        "items": [],
+        "suppressed": 0
+      }
+    },
+    {
+      "checks": [
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "packet_count"
+        },
+        {
+          "agreed": 11,
+          "agreement_percent": 100.0,
+          "compared": 11,
+          "differences": [],
+          "field": "protocol_counts"
+        },
+        {
+          "agreed": 12,
+          "agreement_percent": 85.71428571428571,
+          "compared": 14,
+          "differences": [
+            {
+              "explanation": "tshark exposes the payloads of two non-final IPv4 fragments as data. pcaplens records IPv4 and buffers them until the datagram completes; it has no opaque data layer.",
+              "key": "ethernet/ipv4/data",
+              "pcaplens": null,
+              "status": "verified_scope_difference",
+              "tshark": 2
+            },
+            {
+              "explanation": "tshark's frame.protocols adds data for the five-byte synthetic HTTP response body. pcaplens retains its length and SHA-256 under HTTP metadata rather than creating a body-protocol hierarchy node.",
+              "key": "ethernet/ipv4/tcp/http/data",
+              "pcaplens": null,
+              "status": "verified_scope_difference",
+              "tshark": 1
+            }
+          ],
+          "field": "protocol_hierarchy"
+        },
+        {
+          "agreed": 3,
+          "agreement_percent": 100.0,
+          "compared": 3,
+          "differences": [],
+          "field": "conversation_packets"
+        },
+        {
+          "agreed": 3,
+          "agreement_percent": 100.0,
+          "compared": 3,
+          "differences": [],
+          "field": "conversation_bytes"
+        },
+        {
+          "agreed": 3,
+          "agreement_percent": 100.0,
+          "compared": 3,
+          "differences": [],
+          "field": "conversation_captured_bytes"
+        },
+        {
+          "agreed": 2,
+          "agreement_percent": 100.0,
+          "compared": 2,
+          "differences": [],
+          "field": "dns_queries"
+        },
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "dns_a_answers"
+        },
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "http_requests"
+        },
+        {
+          "agreed": 3,
+          "agreement_percent": 100.0,
+          "compared": 3,
+          "differences": [],
+          "field": "conversation_table_packets"
+        },
+        {
+          "agreed": 3,
+          "agreement_percent": 100.0,
+          "compared": 3,
+          "differences": [],
+          "field": "conversation_table_exact_bytes"
+        }
+      ],
+      "conversation_table_rounded_byte_rows_unmeasured": 0,
+      "file": "protocols-be-ns.pcap",
+      "reference_normalization": {
+        "aliases_and_transparent_layers": {
+          "eth": "ethernet",
+          "ethertype": null,
+          "ip": "ipv4",
+          "ipv6.hopopts": null,
+          "raw": null
+        },
+        "consecutive_duplicate_layers": "collapsed",
+        "counts": "packets containing a layer, not repeated record occurrences"
+      },
+      "reference_tables": [
+        "================================================================================",
+        "UDP Conversations",
+        "Filter:<No Filter>",
+        "                                                           |       <-      | |       ->      | |     Total     |    Relative    |   Duration   |",
+        "                                                           | Frames  Bytes | | Frames  Bytes | | Frames  Bytes |      Start     |              |",
+        "192.0.2.10:53000           <-> 198.51.100.20:53                 1 104 bytes       1 74 bytes        2 178 bytes     0.000000000         0.1000",
+        "192.0.2.10:53001           <-> 198.51.100.20:53                 0 0 bytes         1 41 bytes        1 41 bytes      1.300000000         0.0000",
+        "================================================================================",
+        "================================================================================",
+        "TCP Conversations",
+        "Filter:<No Filter>",
+        "                                                           |       <-      | |       ->      | |     Total     |    Relative    |   Duration   |",
+        "                                                           | Frames  Bytes | | Frames  Bytes | | Frames  Bytes |      Start     |              |",
+        "192.0.2.10:12345           <-> 198.51.100.20:80                 2 151 bytes       4 343 bytes       6 494 bytes     0.200000000         0.5000",
+        "================================================================================",
+        "",
+        "===================================================================",
+        "Protocol Hierarchy Statistics",
+        "Filter: ",
+        "",
+        "eth                                      frames:14 bytes:971",
+        "  ip                                     frames:11 bytes:813",
+        "    udp                                  frames:3 bytes:219",
+        "      dns                                frames:3 bytes:219",
+        "    tcp                                  frames:6 bytes:494",
+        "      http                               frames:2 bytes:278",
+        "    data                                 frames:2 bytes:100",
+        "  vlan                                   frames:1 bytes:46",
+        "    ip                                   frames:1 bytes:46",
+        "      icmp                               frames:1 bytes:46",
+        "  arp                                    frames:1 bytes:42",
+        "  ipv6                                   frames:1 bytes:70",
+        "    icmpv6                               frames:1 bytes:70",
+        "==================================================================="
+      ],
+      "streams": [
+        {
+          "direction": 0,
+          "equal": true,
+          "explanation": null,
+          "reference_bytes": 127,
+          "stream": 0
+        },
+        {
+          "direction": 1,
+          "equal": true,
+          "explanation": null,
+          "reference_bytes": 43,
+          "stream": 0
+        }
+      ],
+      "warnings": {
+        "count": 0,
+        "items": [],
+        "suppressed": 0
+      }
+    },
+    {
+      "checks": [
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "packet_count"
+        },
+        {
+          "agreed": 4,
+          "agreement_percent": 100.0,
+          "compared": 4,
+          "differences": [],
+          "field": "protocol_counts"
+        },
+        {
+          "agreed": 4,
+          "agreement_percent": 100.0,
+          "compared": 4,
+          "differences": [],
+          "field": "protocol_hierarchy"
+        },
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "conversation_packets"
+        },
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "conversation_bytes"
+        },
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "conversation_captured_bytes"
+        },
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "dns_queries"
+        },
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "dns_a_answers"
+        },
+        {
+          "agreed": 0,
+          "agreement_percent": null,
+          "compared": 0,
+          "differences": [],
+          "field": "http_requests"
+        },
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "conversation_table_packets"
+        },
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "conversation_table_exact_bytes"
+        }
+      ],
+      "conversation_table_rounded_byte_rows_unmeasured": 0,
+      "file": "interfaces-le.pcapng",
+      "reference_normalization": {
+        "aliases_and_transparent_layers": {
+          "eth": "ethernet",
+          "ethertype": null,
+          "ip": "ipv4",
+          "ipv6.hopopts": null,
+          "raw": null
+        },
+        "consecutive_duplicate_layers": "collapsed",
+        "counts": "packets containing a layer, not repeated record occurrences"
+      },
+      "reference_tables": [
+        "================================================================================",
+        "UDP Conversations",
+        "Filter:<No Filter>",
+        "                                                           |       <-      | |       ->      | |     Total     |    Relative    |   Duration   |",
+        "                                                           | Frames  Bytes | | Frames  Bytes | | Frames  Bytes |      Start     |              |",
+        "192.0.2.10:53000           <-> 198.51.100.20:53                 1 104 bytes       1 74 bytes        2 178 bytes     0.000000000         0.1000",
+        "================================================================================",
+        "================================================================================",
+        "TCP Conversations",
+        "Filter:<No Filter>",
+        "                                                           |       <-      | |       ->      | |     Total     |    Relative    |   Duration   |",
+        "                                                           | Frames  Bytes | | Frames  Bytes | | Frames  Bytes |      Start     |              |",
+        "================================================================================",
+        "",
+        "===================================================================",
+        "Protocol Hierarchy Statistics",
+        "Filter: ",
+        "",
+        "eth                                      frames:2 bytes:178",
+        "  ip                                     frames:2 bytes:178",
+        "    udp                                  frames:2 bytes:178",
+        "      dns                                frames:2 bytes:178",
+        "==================================================================="
+      ],
+      "streams": [],
+      "warnings": {
+        "count": 0,
+        "items": [],
+        "suppressed": 0
+      }
+    },
+    {
+      "checks": [
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "packet_count"
+        },
+        {
+          "agreed": 4,
+          "agreement_percent": 100.0,
+          "compared": 4,
+          "differences": [],
+          "field": "protocol_counts"
+        },
+        {
+          "agreed": 4,
+          "agreement_percent": 100.0,
+          "compared": 4,
+          "differences": [],
+          "field": "protocol_hierarchy"
+        },
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "conversation_packets"
+        },
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "conversation_bytes"
+        },
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "conversation_captured_bytes"
+        },
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "dns_queries"
+        },
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "dns_a_answers"
+        },
+        {
+          "agreed": 0,
+          "agreement_percent": null,
+          "compared": 0,
+          "differences": [],
+          "field": "http_requests"
+        },
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "conversation_table_packets"
+        },
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "conversation_table_exact_bytes"
+        }
+      ],
+      "conversation_table_rounded_byte_rows_unmeasured": 0,
+      "file": "interfaces-be.pcapng",
+      "reference_normalization": {
+        "aliases_and_transparent_layers": {
+          "eth": "ethernet",
+          "ethertype": null,
+          "ip": "ipv4",
+          "ipv6.hopopts": null,
+          "raw": null
+        },
+        "consecutive_duplicate_layers": "collapsed",
+        "counts": "packets containing a layer, not repeated record occurrences"
+      },
+      "reference_tables": [
+        "================================================================================",
+        "UDP Conversations",
+        "Filter:<No Filter>",
+        "                                                           |       <-      | |       ->      | |     Total     |    Relative    |   Duration   |",
+        "                                                           | Frames  Bytes | | Frames  Bytes | | Frames  Bytes |      Start     |              |",
+        "192.0.2.10:53000           <-> 198.51.100.20:53                 1 104 bytes       1 74 bytes        2 178 bytes     0.000000000         0.1000",
+        "================================================================================",
+        "================================================================================",
+        "TCP Conversations",
+        "Filter:<No Filter>",
+        "                                                           |       <-      | |       ->      | |     Total     |    Relative    |   Duration   |",
+        "                                                           | Frames  Bytes | | Frames  Bytes | | Frames  Bytes |      Start     |              |",
+        "================================================================================",
+        "",
+        "===================================================================",
+        "Protocol Hierarchy Statistics",
+        "Filter: ",
+        "",
+        "eth                                      frames:2 bytes:178",
+        "  ip                                     frames:2 bytes:178",
+        "    udp                                  frames:2 bytes:178",
+        "      dns                                frames:2 bytes:178",
+        "==================================================================="
+      ],
+      "streams": [],
+      "warnings": {
+        "count": 0,
+        "items": [],
+        "suppressed": 0
+      }
+    },
+    {
+      "checks": [
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "packet_count"
+        },
+        {
+          "agreed": 3,
+          "agreement_percent": 100.0,
+          "compared": 3,
+          "differences": [],
+          "field": "protocol_counts"
+        },
+        {
+          "agreed": 3,
+          "agreement_percent": 100.0,
+          "compared": 3,
+          "differences": [],
+          "field": "protocol_hierarchy"
+        },
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "conversation_packets"
+        },
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "conversation_bytes"
+        },
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "conversation_captured_bytes"
+        },
+        {
+          "agreed": 0,
+          "agreement_percent": null,
+          "compared": 0,
+          "differences": [],
+          "field": "dns_queries"
+        },
+        {
+          "agreed": 0,
+          "agreement_percent": null,
+          "compared": 0,
+          "differences": [],
+          "field": "dns_a_answers"
+        },
+        {
+          "agreed": 0,
+          "agreement_percent": null,
+          "compared": 0,
+          "differences": [],
+          "field": "http_requests"
+        },
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "conversation_table_packets"
+        },
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "conversation_table_exact_bytes"
+        }
+      ],
+      "conversation_table_rounded_byte_rows_unmeasured": 0,
+      "file": "reassembly.pcap",
+      "reference_normalization": {
+        "aliases_and_transparent_layers": {
+          "eth": "ethernet",
+          "ethertype": null,
+          "ip": "ipv4",
+          "ipv6.hopopts": null,
+          "raw": null
+        },
+        "consecutive_duplicate_layers": "collapsed",
+        "counts": "packets containing a layer, not repeated record occurrences"
+      },
+      "reference_tables": [
+        "================================================================================",
+        "UDP Conversations",
+        "Filter:<No Filter>",
+        "                                                           |       <-      | |       ->      | |     Total     |    Relative    |   Duration   |",
+        "                                                           | Frames  Bytes | | Frames  Bytes | | Frames  Bytes |      Start     |              |",
+        "================================================================================",
+        "================================================================================",
+        "TCP Conversations",
+        "Filter:<No Filter>",
+        "                                                           |       <-      | |       ->      | |     Total     |    Relative    |   Duration   |",
+        "                                                           | Frames  Bytes | | Frames  Bytes | | Frames  Bytes |      Start     |              |",
+        "192.0.2.10:12345           <-> 198.51.100.20:80                 2 111 bytes       6 344 bytes       8 455 bytes     0.000000000         0.7000",
+        "================================================================================",
+        "",
+        "===================================================================",
+        "Protocol Hierarchy Statistics",
+        "Filter: ",
+        "",
+        "eth                                      frames:8 bytes:455",
+        "  ip                                     frames:8 bytes:455",
+        "    tcp                                  frames:8 bytes:455",
+        "      tcp.segments                       frames:1 bytes:59",
+        "==================================================================="
+      ],
+      "streams": [
+        {
+          "direction": 0,
+          "equal": true,
+          "explanation": null,
+          "reference_bytes": 15,
+          "stream": 0
+        },
+        {
+          "direction": 1,
+          "equal": true,
+          "explanation": null,
+          "reference_bytes": 3,
+          "stream": 0
+        }
+      ],
+      "warnings": {
+        "count": 0,
+        "items": [],
+        "suppressed": 0
+      }
+    },
+    {
+      "checks": [
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "packet_count"
+        },
+        {
+          "agreed": 3,
+          "agreement_percent": 100.0,
+          "compared": 3,
+          "differences": [],
+          "field": "protocol_counts"
+        },
+        {
+          "agreed": 3,
+          "agreement_percent": 100.0,
+          "compared": 3,
+          "differences": [],
+          "field": "protocol_hierarchy"
+        },
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "conversation_packets"
+        },
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "conversation_bytes"
+        },
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "conversation_captured_bytes"
+        },
+        {
+          "agreed": 0,
+          "agreement_percent": null,
+          "compared": 0,
+          "differences": [],
+          "field": "dns_queries"
+        },
+        {
+          "agreed": 0,
+          "agreement_percent": null,
+          "compared": 0,
+          "differences": [],
+          "field": "dns_a_answers"
+        },
+        {
+          "agreed": 0,
+          "agreement_percent": null,
+          "compared": 0,
+          "differences": [],
+          "field": "http_requests"
+        },
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "conversation_table_packets"
+        },
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "conversation_table_exact_bytes"
+        }
+      ],
+      "conversation_table_rounded_byte_rows_unmeasured": 0,
+      "file": "wraparound.pcap",
+      "reference_normalization": {
+        "aliases_and_transparent_layers": {
+          "eth": "ethernet",
+          "ethertype": null,
+          "ip": "ipv4",
+          "ipv6.hopopts": null,
+          "raw": null
+        },
+        "consecutive_duplicate_layers": "collapsed",
+        "counts": "packets containing a layer, not repeated record occurrences"
+      },
+      "reference_tables": [
+        "================================================================================",
+        "UDP Conversations",
+        "Filter:<No Filter>",
+        "                                                           |       <-      | |       ->      | |     Total     |    Relative    |   Duration   |",
+        "                                                           | Frames  Bytes | | Frames  Bytes | | Frames  Bytes |      Start     |              |",
+        "================================================================================",
+        "================================================================================",
+        "TCP Conversations",
+        "Filter:<No Filter>",
+        "                                                           |       <-      | |       ->      | |     Total     |    Relative    |   Duration   |",
+        "                                                           | Frames  Bytes | | Frames  Bytes | | Frames  Bytes |      Start     |              |",
+        "192.0.2.10:12345           <-> 198.51.100.20:80                 0 0 bytes         3 166 bytes       3 166 bytes     0.000000000         0.2000",
+        "================================================================================",
+        "",
+        "===================================================================",
+        "Protocol Hierarchy Statistics",
+        "Filter: ",
+        "",
+        "eth                                      frames:3 bytes:166",
+        "  ip                                     frames:3 bytes:166",
+        "    tcp                                  frames:3 bytes:166",
+        "==================================================================="
+      ],
+      "streams": [
+        {
+          "direction": 0,
+          "equal": true,
+          "explanation": null,
+          "reference_bytes": 4,
+          "stream": 0
+        },
+        {
+          "direction": 1,
+          "equal": true,
+          "explanation": null,
+          "reference_bytes": 0,
+          "stream": 0
+        }
+      ],
+      "warnings": {
+        "count": 0,
+        "items": [],
+        "suppressed": 0
+      }
+    },
+    {
+      "checks": [
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "packet_count"
+        },
+        {
+          "agreed": 4,
+          "agreement_percent": 100.0,
+          "compared": 4,
+          "differences": [],
+          "field": "protocol_counts"
+        },
+        {
+          "agreed": 4,
+          "agreement_percent": 100.0,
+          "compared": 4,
+          "differences": [],
+          "field": "protocol_hierarchy"
+        },
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "conversation_packets"
+        },
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "conversation_bytes"
+        },
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "conversation_captured_bytes"
+        },
+        {
+          "agreed": 0,
+          "agreement_percent": null,
+          "compared": 0,
+          "differences": [],
+          "field": "dns_queries"
+        },
+        {
+          "agreed": 0,
+          "agreement_percent": null,
+          "compared": 0,
+          "differences": [],
+          "field": "dns_a_answers"
+        },
+        {
+          "agreed": 0,
+          "agreement_percent": null,
+          "compared": 0,
+          "differences": [],
+          "field": "http_requests"
+        },
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "conversation_table_packets"
+        },
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "conversation_table_exact_bytes"
+        }
+      ],
+      "conversation_table_rounded_byte_rows_unmeasured": 0,
+      "file": "tls.pcap",
+      "reference_normalization": {
+        "aliases_and_transparent_layers": {
+          "eth": "ethernet",
+          "ethertype": null,
+          "ip": "ipv4",
+          "ipv6.hopopts": null,
+          "raw": null
+        },
+        "consecutive_duplicate_layers": "collapsed",
+        "counts": "packets containing a layer, not repeated record occurrences"
+      },
+      "reference_tables": [
+        "================================================================================",
+        "UDP Conversations",
+        "Filter:<No Filter>",
+        "                                                           |       <-      | |       ->      | |     Total     |    Relative    |   Duration   |",
+        "                                                           | Frames  Bytes | | Frames  Bytes | | Frames  Bytes |      Start     |              |",
+        "================================================================================",
+        "================================================================================",
+        "TCP Conversations",
+        "Filter:<No Filter>",
+        "                                                           |       <-      | |       ->      | |     Total     |    Relative    |   Duration   |",
+        "                                                           | Frames  Bytes | | Frames  Bytes | | Frames  Bytes |      Start     |              |",
+        "192.0.2.10:12345           <-> 198.51.100.20:443                1 109 bytes       3 268 bytes       4 377 bytes     0.000000000         0.3000",
+        "================================================================================",
+        "",
+        "===================================================================",
+        "Protocol Hierarchy Statistics",
+        "Filter: ",
+        "",
+        "eth                                      frames:4 bytes:377",
+        "  ip                                     frames:4 bytes:377",
+        "    tcp                                  frames:4 bytes:377",
+        "      tls                                frames:3 bytes:323",
+        "        tcp.segments                     frames:1 bytes:143",
+        "          tls                            frames:1 bytes:143",
+        "==================================================================="
+      ],
+      "streams": [
+        {
+          "direction": 0,
+          "equal": true,
+          "explanation": null,
+          "reference_bytes": 106,
+          "stream": 0
+        },
+        {
+          "direction": 1,
+          "equal": true,
+          "explanation": null,
+          "reference_bytes": 55,
+          "stream": 0
+        }
+      ],
+      "warnings": {
+        "count": 0,
+        "items": [],
+        "suppressed": 0
+      }
+    },
+    {
+      "checks": [
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "packet_count"
+        },
+        {
+          "agreed": 2,
+          "agreement_percent": 100.0,
+          "compared": 2,
+          "differences": [],
+          "field": "protocol_counts"
+        },
+        {
+          "agreed": 2,
+          "agreement_percent": 100.0,
+          "compared": 2,
+          "differences": [],
+          "field": "protocol_hierarchy"
+        },
+        {
+          "agreed": 0,
+          "agreement_percent": null,
+          "compared": 0,
+          "differences": [],
+          "field": "conversation_packets"
+        },
+        {
+          "agreed": 0,
+          "agreement_percent": null,
+          "compared": 0,
+          "differences": [],
+          "field": "conversation_bytes"
+        },
+        {
+          "agreed": 0,
+          "agreement_percent": null,
+          "compared": 0,
+          "differences": [],
+          "field": "conversation_captured_bytes"
+        },
+        {
+          "agreed": 0,
+          "agreement_percent": null,
+          "compared": 0,
+          "differences": [],
+          "field": "dns_queries"
+        },
+        {
+          "agreed": 0,
+          "agreement_percent": null,
+          "compared": 0,
+          "differences": [],
+          "field": "dns_a_answers"
+        },
+        {
+          "agreed": 0,
+          "agreement_percent": null,
+          "compared": 0,
+          "differences": [],
+          "field": "http_requests"
+        },
+        {
+          "agreed": 0,
+          "agreement_percent": null,
+          "compared": 0,
+          "differences": [],
+          "field": "conversation_table_packets"
+        },
+        {
+          "agreed": 0,
+          "agreement_percent": null,
+          "compared": 0,
+          "differences": [],
+          "field": "conversation_table_exact_bytes"
+        }
+      ],
+      "conversation_table_rounded_byte_rows_unmeasured": 0,
+      "file": "raw-ip.pcap",
+      "reference_normalization": {
+        "aliases_and_transparent_layers": {
+          "eth": "ethernet",
+          "ethertype": null,
+          "ip": "ipv4",
+          "ipv6.hopopts": null,
+          "raw": null
+        },
+        "consecutive_duplicate_layers": "collapsed",
+        "counts": "packets containing a layer, not repeated record occurrences"
+      },
+      "reference_tables": [
+        "================================================================================",
+        "UDP Conversations",
+        "Filter:<No Filter>",
+        "                                                           |       <-      | |       ->      | |     Total     |    Relative    |   Duration   |",
+        "                                                           | Frames  Bytes | | Frames  Bytes | | Frames  Bytes |      Start     |              |",
+        "================================================================================",
+        "================================================================================",
+        "TCP Conversations",
+        "Filter:<No Filter>",
+        "                                                           |       <-      | |       ->      | |     Total     |    Relative    |   Duration   |",
+        "                                                           | Frames  Bytes | | Frames  Bytes | | Frames  Bytes |      Start     |              |",
+        "================================================================================",
+        "",
+        "===================================================================",
+        "Protocol Hierarchy Statistics",
+        "Filter: ",
+        "",
+        "raw                                      frames:1 bytes:28",
+        "  ip                                     frames:1 bytes:28",
+        "    icmp                                 frames:1 bytes:28",
+        "==================================================================="
+      ],
+      "streams": [],
+      "warnings": {
+        "count": 0,
+        "items": [],
+        "suppressed": 0
+      }
+    },
+    {
+      "checks": [
+        {
+          "agreed": 1,
+          "agreement_percent": 100.0,
+          "compared": 1,
+          "differences": [],
+          "field": "packet_count"
+        },
+        {
+          "agreed": 3,
+          "agreement_percent": 100.0,
+          "compared": 3,
+          "differences": [],
+          "field": "protocol_counts"
+        },
+        {
+          "agreed": 3,
+          "agreement_percent": 100.0,
+          "compared": 3,
+          "differences": [],
+          "field": "protocol_hierarchy"
+        },
+        {
+          "agreed": 0,
+          "agreement_percent": null,
+          "compared": 0,
+          "differences": [],
+          "field": "conversation_packets"
+        },
+        {
+          "agreed": 0,
+          "agreement_percent": null,
+          "compared": 0,
+          "differences": [],
+          "field": "conversation_bytes"
+        },
+        {
+          "agreed": 0,
+          "agreement_percent": null,
+          "compared": 0,
+          "differences": [],
+          "field": "conversation_captured_bytes"
+        },
+        {
+          "agreed": 0,
+          "agreement_percent": null,
+          "compared": 0,
+          "differences": [],
+          "field": "dns_queries"
+        },
+        {
+          "agreed": 0,
+          "agreement_percent": null,
+          "compared": 0,
+          "differences": [],
+          "field": "dns_a_answers"
+        },
+        {
+          "agreed": 0,
+          "agreement_percent": null,
+          "compared": 0,
+          "differences": [],
+          "field": "http_requests"
+        },
+        {
+          "agreed": 0,
+          "agreement_percent": null,
+          "compared": 0,
+          "differences": [],
+          "field": "conversation_table_packets"
+        },
+        {
+          "agreed": 0,
+          "agreement_percent": null,
+          "compared": 0,
+          "differences": [],
+          "field": "conversation_table_exact_bytes"
+        }
+      ],
+      "conversation_table_rounded_byte_rows_unmeasured": 0,
+      "file": "sll.pcap",
+      "reference_normalization": {
+        "aliases_and_transparent_layers": {
+          "eth": "ethernet",
+          "ethertype": null,
+          "ip": "ipv4",
+          "ipv6.hopopts": null,
+          "raw": null
+        },
+        "consecutive_duplicate_layers": "collapsed",
+        "counts": "packets containing a layer, not repeated record occurrences"
+      },
+      "reference_tables": [
+        "================================================================================",
+        "UDP Conversations",
+        "Filter:<No Filter>",
+        "                                                           |       <-      | |       ->      | |     Total     |    Relative    |   Duration   |",
+        "                                                           | Frames  Bytes | | Frames  Bytes | | Frames  Bytes |      Start     |              |",
+        "================================================================================",
+        "================================================================================",
+        "TCP Conversations",
+        "Filter:<No Filter>",
+        "                                                           |       <-      | |       ->      | |     Total     |    Relative    |   Duration   |",
+        "                                                           | Frames  Bytes | | Frames  Bytes | | Frames  Bytes |      Start     |              |",
+        "================================================================================",
+        "",
+        "===================================================================",
+        "Protocol Hierarchy Statistics",
+        "Filter: ",
+        "",
+        "sll                                      frames:1 bytes:44",
+        "  ip                                     frames:1 bytes:44",
+        "    icmp                                 frames:1 bytes:44",
+        "==================================================================="
+      ],
+      "streams": [],
+      "warnings": {
+        "count": 0,
+        "items": [],
+        "suppressed": 0
+      }
+    }
+  ],
+  "scope": "offline; exact comparisons; empty fields are unmeasured; raw evidence local only",
+  "tshark_version": "TShark (Wireshark) 4.4.18."
+}

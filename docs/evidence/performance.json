@@ -1,0 +1,661 @@
+{
+  "baseline_scope": "dpkt parse-only L2-L4 versus pcaplens full analysis; workloads differ",
+  "hardware_scope": "execution machine, not necessarily the user's laptop",
+  "logical_cpus": 5,
+  "machine": "x86_64",
+  "physical_memory_bytes": 35743784960,
+  "profile": [
+    {
+      "cumulative_seconds": 8.505680602,
+      "function": "summary.py:25:analyze",
+      "primitive_calls": 1,
+      "self_seconds": 0.296642718,
+      "total_calls": 1
+    },
+    {
+      "cumulative_seconds": 3.3140192500000003,
+      "function": "table.py:85:add",
+      "primitive_calls": 50000,
+      "self_seconds": 0.846101137,
+      "total_calls": 50000
+    },
+    {
+      "cumulative_seconds": 2.326423248,
+      "function": "registry.py:13:dissect",
+      "primitive_calls": 50000,
+      "self_seconds": 0.24133051200000002,
+      "total_calls": 50000
+    },
+    {
+      "cumulative_seconds": 1.9139387810000001,
+      "function": "table.py:79:remove",
+      "primitive_calls": 50000,
+      "self_seconds": 0.064216089,
+      "total_calls": 50000
+    },
+    {
+      "cumulative_seconds": 1.750091226,
+      "function": "summary.py:95:finished",
+      "primitive_calls": 50000,
+      "self_seconds": 0.19713103,
+      "total_calls": 50000
+    },
+    {
+      "cumulative_seconds": 1.020730487,
+      "function": "sanitize.py:15:sanitize",
+      "primitive_calls": 1,
+      "self_seconds": 0.39533027000000004,
+      "total_calls": 515819
+    },
+    {
+      "cumulative_seconds": 0.808120244,
+      "function": "redact.py:25:redact",
+      "primitive_calls": 1,
+      "self_seconds": 0.469624511,
+      "total_calls": 515818
+    },
+    {
+      "cumulative_seconds": 0.806870383,
+      "function": "ipaddress.py:1286:__init__",
+      "primitive_calls": 200000,
+      "self_seconds": 0.155888936,
+      "total_calls": 200000
+    },
+    {
+      "cumulative_seconds": 0.7155024630000001,
+      "function": "ipv4.py:23:parse",
+      "primitive_calls": 50000,
+      "self_seconds": 0.235404982,
+      "total_calls": 50000
+    },
+    {
+      "cumulative_seconds": 0.699764067,
+      "function": "ipaddress.py:28:ip_address",
+      "primitive_calls": 100000,
+      "self_seconds": 0.033845602,
+      "total_calls": 100000
+    },
+    {
+      "cumulative_seconds": 0.6095161570000001,
+      "function": "reassembly.py:90:runs",
+      "primitive_calls": 300000,
+      "self_seconds": 0.414555822,
+      "total_calls": 300000
+    },
+    {
+      "cumulative_seconds": 0.5690518210000001,
+      "function": "summary.py:63:retain",
+      "primitive_calls": 50000,
+      "self_seconds": 0.054529838000000004,
+      "total_calls": 50000
+    },
+    {
+      "cumulative_seconds": 0.5686207870000001,
+      "function": "ipaddress.py:1187:_ip_int_from_string",
+      "primitive_calls": 100000,
+      "self_seconds": 0.07926719700000001,
+      "total_calls": 100000
+    },
+    {
+      "cumulative_seconds": 0.5382693040000001,
+      "function": "table.py:37:export",
+      "primitive_calls": 50000,
+      "self_seconds": 0.10432400900000001,
+      "total_calls": 50000
+    },
+    {
+      "cumulative_seconds": 0.522627768,
+      "function": "sanitize.py:9:text",
+      "primitive_calls": 476085,
+      "self_seconds": 0.221768393,
+      "total_calls": 476085
+    },
+    {
+      "cumulative_seconds": 0.501743629,
+      "function": "__init__.py:183:dumps",
+      "primitive_calls": 50000,
+      "self_seconds": 0.019506254,
+      "total_calls": 50000
+    },
+    {
+      "cumulative_seconds": 0.482237375,
+      "function": "encoder.py:183:encode",
+      "primitive_calls": 50000,
+      "self_seconds": 0.051551088,
+      "total_calls": 50000
+    },
+    {
+      "cumulative_seconds": 0.478701439,
+      "function": "~:0:<built-in method from_bytes>",
+      "primitive_calls": 250000,
+      "self_seconds": 0.10257242400000001,
+      "total_calls": 250000
+    },
+    {
+      "cumulative_seconds": 0.475287039,
+      "function": "open.py:55:packets",
+      "primitive_calls": 50001,
+      "self_seconds": 0.013934881000000001,
+      "total_calls": 50001
+    },
+    {
+      "cumulative_seconds": 0.46126249300000005,
+      "function": "pcap.py:18:read",
+      "primitive_calls": 50001,
+      "self_seconds": 0.106502938,
+      "total_calls": 50001
+    },
+    {
+      "cumulative_seconds": 0.40870213000000005,
+      "function": "~:0:<built-in method builtins.len>",
+      "primitive_calls": 5850085,
+      "self_seconds": 0.40870213000000005,
+      "total_calls": 5850085
+    },
+    {
+      "cumulative_seconds": 0.408205904,
+      "function": "encoder.py:205:iterencode",
+      "primitive_calls": 50000,
+      "self_seconds": 0.408205904,
+      "total_calls": 50000
+    },
+    {
+      "cumulative_seconds": 0.407104648,
+      "function": "reassembly.py:104:metadata",
+      "primitive_calls": 100000,
+      "self_seconds": 0.13260423500000001,
+      "total_calls": 100000
+    },
+    {
+      "cumulative_seconds": 0.376129015,
+      "function": "ipaddress.py:1213:_parse_octet",
+      "primitive_calls": 400000,
+      "self_seconds": 0.25902377200000004,
+      "total_calls": 400000
+    },
+    {
+      "cumulative_seconds": 0.33027504900000004,
+      "function": "reassembly.py:47:add",
+      "primitive_calls": 50000,
+      "self_seconds": 0.214234854,
+      "total_calls": 50000
+    }
+  ],
+  "python": "3.12.14",
+  "rows": [
+    {
+      "decimal_MB_per_second": 0.6039761590634874,
+      "engine": "pcaplens",
+      "experiment": "throughput",
+      "file_bytes": 86024,
+      "flows": 1000,
+      "packets": 1000,
+      "packets_per_second": 7021.019239555094,
+      "reassembly_peak_accounted_bytes": 1952,
+      "repeat": 0,
+      "sampled_peak_rss_bytes": 44212224,
+      "seconds": 0.14242946299964387,
+      "settings": {},
+      "stream_metadata_sha256": "30e27eab62a3b4f301ef5edbcbeb59fcc314c3f44b579f34edd130d1089e96a0",
+      "warnings": 0
+    },
+    {
+      "decimal_MB_per_second": 0.6379388707037468,
+      "engine": "pcaplens",
+      "experiment": "throughput",
+      "file_bytes": 86024,
+      "flows": 1000,
+      "packets": 1000,
+      "packets_per_second": 7415.824313025978,
+      "reassembly_peak_accounted_bytes": 1952,
+      "repeat": 1,
+      "sampled_peak_rss_bytes": 43941888,
+      "seconds": 0.1348467760008134,
+      "settings": {},
+      "stream_metadata_sha256": "30e27eab62a3b4f301ef5edbcbeb59fcc314c3f44b579f34edd130d1089e96a0",
+      "warnings": 0
+    },
+    {
+      "decimal_MB_per_second": 0.5922714659992668,
+      "engine": "pcaplens",
+      "experiment": "throughput",
+      "file_bytes": 86024,
+      "flows": 1000,
+      "packets": 1000,
+      "packets_per_second": 6884.956128513751,
+      "reassembly_peak_accounted_bytes": 1952,
+      "repeat": 2,
+      "sampled_peak_rss_bytes": 43044864,
+      "seconds": 0.14524420799989457,
+      "settings": {},
+      "stream_metadata_sha256": "30e27eab62a3b4f301ef5edbcbeb59fcc314c3f44b579f34edd130d1089e96a0",
+      "warnings": 0
+    },
+    {
+      "decimal_MB_per_second": 11.59977642969891,
+      "engine": "dpkt",
+      "experiment": "throughput",
+      "file_bytes": 86024,
+      "flows": null,
+      "packets": 1000,
+      "packets_per_second": 134843.49053402434,
+      "reassembly_peak_accounted_bytes": null,
+      "repeat": 0,
+      "sampled_peak_rss_bytes": 33931264,
+      "seconds": 0.007416004999868164,
+      "settings": {},
+      "stream_metadata_sha256": null,
+      "warnings": 0
+    },
+    {
+      "decimal_MB_per_second": 12.387528144922003,
+      "engine": "dpkt",
+      "experiment": "throughput",
+      "file_bytes": 86024,
+      "flows": null,
+      "packets": 1000,
+      "packets_per_second": 144000.83866039713,
+      "reassembly_peak_accounted_bytes": null,
+      "repeat": 1,
+      "sampled_peak_rss_bytes": 34004992,
+      "seconds": 0.006944404000023496,
+      "settings": {},
+      "stream_metadata_sha256": null,
+      "warnings": 0
+    },
+    {
+      "decimal_MB_per_second": 12.772989160129114,
+      "engine": "dpkt",
+      "experiment": "throughput",
+      "file_bytes": 86024,
+      "flows": null,
+      "packets": 1000,
+      "packets_per_second": 148481.69301740345,
+      "reassembly_peak_accounted_bytes": null,
+      "repeat": 2,
+      "sampled_peak_rss_bytes": 34160640,
+      "seconds": 0.006734837000294647,
+      "settings": {},
+      "stream_metadata_sha256": null,
+      "warnings": 0
+    },
+    {
+      "decimal_MB_per_second": 0.5560643779792667,
+      "engine": "pcaplens",
+      "experiment": "throughput",
+      "file_bytes": 860024,
+      "flows": 10000,
+      "packets": 10000,
+      "packets_per_second": 6465.684422519217,
+      "reassembly_peak_accounted_bytes": 1952,
+      "repeat": 0,
+      "sampled_peak_rss_bytes": 131788800,
+      "seconds": 1.5466266749999704,
+      "settings": {},
+      "stream_metadata_sha256": "62cd8ee5b69b65d5204fde1da5933534f1439983b4ced620c532a76242b84dbd",
+      "warnings": 1
+    },
+    {
+      "decimal_MB_per_second": 0.4861183615856779,
+      "engine": "pcaplens",
+      "experiment": "throughput",
+      "file_bytes": 860024,
+      "flows": 10000,
+      "packets": 10000,
+      "packets_per_second": 5652.381347330747,
+      "reassembly_peak_accounted_bytes": 1952,
+      "repeat": 1,
+      "sampled_peak_rss_bytes": 133013504,
+      "seconds": 1.7691658409994488,
+      "settings": {},
+      "stream_metadata_sha256": "62cd8ee5b69b65d5204fde1da5933534f1439983b4ced620c532a76242b84dbd",
+      "warnings": 1
+    },
+    {
+      "decimal_MB_per_second": 0.5001399942917506,
+      "engine": "pcaplens",
+      "experiment": "throughput",
+      "file_bytes": 860024,
+      "flows": 10000,
+      "packets": 10000,
+      "packets_per_second": 5815.419038209988,
+      "reassembly_peak_accounted_bytes": 1952,
+      "repeat": 2,
+      "sampled_peak_rss_bytes": 134381568,
+      "seconds": 1.7195665409999492,
+      "settings": {},
+      "stream_metadata_sha256": "62cd8ee5b69b65d5204fde1da5933534f1439983b4ced620c532a76242b84dbd",
+      "warnings": 1
+    },
+    {
+      "decimal_MB_per_second": 11.387098126492914,
+      "engine": "dpkt",
+      "experiment": "throughput",
+      "file_bytes": 860024,
+      "flows": null,
+      "packets": 10000,
+      "packets_per_second": 132404.42274277128,
+      "reassembly_peak_accounted_bytes": null,
+      "repeat": 0,
+      "sampled_peak_rss_bytes": 33964032,
+      "seconds": 0.07552617799956352,
+      "settings": {},
+      "stream_metadata_sha256": null,
+      "warnings": 0
+    },
+    {
+      "decimal_MB_per_second": 12.739049366970463,
+      "engine": "dpkt",
+      "experiment": "throughput",
+      "file_bytes": 860024,
+      "flows": null,
+      "packets": 10000,
+      "packets_per_second": 148124.34730856886,
+      "reassembly_peak_accounted_bytes": null,
+      "repeat": 1,
+      "sampled_peak_rss_bytes": 34226176,
+      "seconds": 0.06751084600000468,
+      "settings": {},
+      "stream_metadata_sha256": null,
+      "warnings": 0
+    },
+    {
+      "decimal_MB_per_second": 12.917274719226377,
+      "engine": "dpkt",
+      "experiment": "throughput",
+      "file_bytes": 860024,
+      "flows": null,
+      "packets": 10000,
+      "packets_per_second": 150196.6772930334,
+      "reassembly_peak_accounted_bytes": null,
+      "repeat": 2,
+      "sampled_peak_rss_bytes": 34058240,
+      "seconds": 0.0665793689995553,
+      "settings": {},
+      "stream_metadata_sha256": null,
+      "warnings": 0
+    },
+    {
+      "decimal_MB_per_second": 1.2282218511711036,
+      "engine": "pcaplens",
+      "experiment": "throughput",
+      "file_bytes": 4300024,
+      "flows": 50000,
+      "packets": 50000,
+      "packets_per_second": 14281.56972113532,
+      "reassembly_peak_accounted_bytes": 1952,
+      "repeat": 0,
+      "sampled_peak_rss_bytes": 132472832,
+      "seconds": 3.5010157130000152,
+      "settings": {},
+      "stream_metadata_sha256": "62cd8ee5b69b65d5204fde1da5933534f1439983b4ced620c532a76242b84dbd",
+      "warnings": 1
+    },
+    {
+      "decimal_MB_per_second": 1.2412170435125531,
+      "engine": "pcaplens",
+      "experiment": "throughput",
+      "file_bytes": 4300024,
+      "flows": 50000,
+      "packets": 50000,
+      "packets_per_second": 14432.675765444023,
+      "reassembly_peak_accounted_bytes": 1952,
+      "repeat": 1,
+      "sampled_peak_rss_bytes": 132509696,
+      "seconds": 3.464361065999583,
+      "settings": {},
+      "stream_metadata_sha256": "62cd8ee5b69b65d5204fde1da5933534f1439983b4ced620c532a76242b84dbd",
+      "warnings": 1
+    },
+    {
+      "decimal_MB_per_second": 1.2489495198681957,
+      "engine": "pcaplens",
+      "experiment": "throughput",
+      "file_bytes": 4300024,
+      "flows": 50000,
+      "packets": 50000,
+      "packets_per_second": 14522.587779372812,
+      "reassembly_peak_accounted_bytes": 1952,
+      "repeat": 2,
+      "sampled_peak_rss_bytes": 134017024,
+      "seconds": 3.442912568999418,
+      "settings": {},
+      "stream_metadata_sha256": "62cd8ee5b69b65d5204fde1da5933534f1439983b4ced620c532a76242b84dbd",
+      "warnings": 1
+    },
+    {
+      "decimal_MB_per_second": 11.65083501786558,
+      "engine": "dpkt",
+      "experiment": "throughput",
+      "file_bytes": 4300024,
+      "flows": null,
+      "packets": 50000,
+      "packets_per_second": 135474.0696547924,
+      "reassembly_peak_accounted_bytes": null,
+      "repeat": 0,
+      "sampled_peak_rss_bytes": 33816576,
+      "seconds": 0.3690743189999921,
+      "settings": {},
+      "stream_metadata_sha256": null,
+      "warnings": 0
+    },
+    {
+      "decimal_MB_per_second": 13.07270851532383,
+      "engine": "dpkt",
+      "experiment": "throughput",
+      "file_bytes": 4300024,
+      "flows": null,
+      "packets": 50000,
+      "packets_per_second": 152007.3901369368,
+      "reassembly_peak_accounted_bytes": null,
+      "repeat": 1,
+      "sampled_peak_rss_bytes": 33976320,
+      "seconds": 0.32893137600058253,
+      "settings": {},
+      "stream_metadata_sha256": null,
+      "warnings": 0
+    },
+    {
+      "decimal_MB_per_second": 12.70550703123203,
+      "engine": "dpkt",
+      "experiment": "throughput",
+      "file_bytes": 4300024,
+      "flows": null,
+      "packets": 50000,
+      "packets_per_second": 147737.6292694184,
+      "reassembly_peak_accounted_bytes": null,
+      "repeat": 2,
+      "sampled_peak_rss_bytes": 34119680,
+      "seconds": 0.3384378119999383,
+      "settings": {},
+      "stream_metadata_sha256": null,
+      "warnings": 0
+    },
+    {
+      "decimal_MB_per_second": 1.406144557579061,
+      "engine": "pcaplens",
+      "experiment": "ablation",
+      "file_bytes": 4300024,
+      "flows": 50000,
+      "packets": 50000,
+      "packets_per_second": 16350.42685318804,
+      "reassembly_peak_accounted_bytes": 64,
+      "repeat": 0,
+      "sampled_peak_rss_bytes": 132952064,
+      "seconds": 3.0580241389998264,
+      "settings": {
+        "flow_timeout": 1
+      },
+      "stream_metadata_sha256": "62cd8ee5b69b65d5204fde1da5933534f1439983b4ced620c532a76242b84dbd",
+      "warnings": 1
+    },
+    {
+      "decimal_MB_per_second": 1.261731246839632,
+      "engine": "pcaplens",
+      "experiment": "ablation",
+      "file_bytes": 4300024,
+      "flows": 50000,
+      "packets": 50000,
+      "packets_per_second": 14671.211682070056,
+      "reassembly_peak_accounted_bytes": 1952,
+      "repeat": 0,
+      "sampled_peak_rss_bytes": 131416064,
+      "seconds": 3.4080348019997473,
+      "settings": {
+        "flow_timeout": 60
+      },
+      "stream_metadata_sha256": "62cd8ee5b69b65d5204fde1da5933534f1439983b4ced620c532a76242b84dbd",
+      "warnings": 1
+    },
+    {
+      "decimal_MB_per_second": 2.099467794671689,
+      "engine": "pcaplens",
+      "experiment": "ablation",
+      "file_bytes": 4300024,
+      "flows": 128,
+      "packets": 50000,
+      "packets_per_second": 24412.279962526827,
+      "reassembly_peak_accounted_bytes": 40960,
+      "repeat": 0,
+      "sampled_peak_rss_bytes": 43458560,
+      "seconds": 2.048149540999475,
+      "settings": {
+        "flow_timeout": 10000
+      },
+      "stream_metadata_sha256": "c2e3bc1c8dd3651e3dd00522b9ecfe70eef6af9467204748a27adc5a70a0f41b",
+      "warnings": 1
+    },
+    {
+      "decimal_MB_per_second": 2.2028319957232707,
+      "engine": "pcaplens",
+      "experiment": "ablation",
+      "file_bytes": 4300024,
+      "flows": 128,
+      "packets": 50000,
+      "packets_per_second": 25614.182568786488,
+      "reassembly_peak_accounted_bytes": 40960,
+      "repeat": 0,
+      "sampled_peak_rss_bytes": 43798528,
+      "seconds": 1.952043555000273,
+      "settings": {
+        "flow_timeout": 10000,
+        "overlap": "first"
+      },
+      "stream_metadata_sha256": "c2e3bc1c8dd3651e3dd00522b9ecfe70eef6af9467204748a27adc5a70a0f41b",
+      "warnings": 1
+    },
+    {
+      "decimal_MB_per_second": 1.968352613311581,
+      "engine": "pcaplens",
+      "experiment": "ablation",
+      "file_bytes": 4300024,
+      "flows": 128,
+      "packets": 50000,
+      "packets_per_second": 22887.693339753234,
+      "reassembly_peak_accounted_bytes": 40960,
+      "repeat": 0,
+      "sampled_peak_rss_bytes": 43311104,
+      "seconds": 2.1845801259996733,
+      "settings": {
+        "flow_timeout": 10000,
+        "overlap": "last"
+      },
+      "stream_metadata_sha256": "75814d8a45e160610f503932076ebf1b5bc3db73dd5c29a4087e46f8a4b3a389",
+      "warnings": 1
+    },
+    {
+      "decimal_MB_per_second": 2.12160385172115,
+      "engine": "pcaplens",
+      "experiment": "ablation",
+      "file_bytes": 4300024,
+      "flows": 128,
+      "packets": 50000,
+      "packets_per_second": 24669.67453810898,
+      "reassembly_peak_accounted_bytes": 40960,
+      "repeat": 0,
+      "sampled_peak_rss_bytes": 44150784,
+      "seconds": 2.026779880000504,
+      "settings": {
+        "flow_timeout": 10000,
+        "overlap": "reject"
+      },
+      "stream_metadata_sha256": "21323d24ed189ed67e5b1c1498de80fd34791bbad3a6f87ddb24f9929b7aede4",
+      "warnings": 48721
+    },
+    {
+      "decimal_MB_per_second": 1.3557456418607439,
+      "engine": "pcaplens",
+      "experiment": "ablation",
+      "file_bytes": 4300024,
+      "flows": 50000,
+      "packets": 50000,
+      "packets_per_second": 15764.396220355327,
+      "reassembly_peak_accounted_bytes": 1024,
+      "repeat": 0,
+      "sampled_peak_rss_bytes": 133623808,
+      "seconds": 3.171704091999345,
+      "settings": {
+        "max_flows": 32
+      },
+      "stream_metadata_sha256": "62cd8ee5b69b65d5204fde1da5933534f1439983b4ced620c532a76242b84dbd",
+      "warnings": 49969
+    },
+    {
+      "decimal_MB_per_second": 1.1818496900049107,
+      "engine": "pcaplens",
+      "experiment": "ablation",
+      "file_bytes": 4300024,
+      "flows": 50000,
+      "packets": 50000,
+      "packets_per_second": 13742.361554318193,
+      "reassembly_peak_accounted_bytes": 1952,
+      "repeat": 0,
+      "sampled_peak_rss_bytes": 131952640,
+      "seconds": 3.6383848440000293,
+      "settings": {
+        "max_flows": 4096
+      },
+      "stream_metadata_sha256": "62cd8ee5b69b65d5204fde1da5933534f1439983b4ced620c532a76242b84dbd",
+      "warnings": 1
+    },
+    {
+      "decimal_MB_per_second": 1.2066328435879128,
+      "engine": "pcaplens",
+      "experiment": "ablation",
+      "file_bytes": 4300024,
+      "flows": 50000,
+      "packets": 50000,
+      "packets_per_second": 14030.536150355358,
+      "reassembly_peak_accounted_bytes": 1952,
+      "repeat": 0,
+      "sampled_peak_rss_bytes": 131420160,
+      "seconds": 3.563655691000349,
+      "settings": {
+        "checksum": false
+      },
+      "stream_metadata_sha256": "62cd8ee5b69b65d5204fde1da5933534f1439983b4ced620c532a76242b84dbd",
+      "warnings": 1
+    },
+    {
+      "decimal_MB_per_second": 1.0459150554024916,
+      "engine": "pcaplens",
+      "experiment": "ablation",
+      "file_bytes": 4300024,
+      "flows": 50000,
+      "packets": 50000,
+      "packets_per_second": 12161.735090344748,
+      "reassembly_peak_accounted_bytes": 1952,
+      "repeat": 0,
+      "sampled_peak_rss_bytes": 131694592,
+      "seconds": 4.111255476999759,
+      "settings": {
+        "checksum": true
+      },
+      "stream_metadata_sha256": "62cd8ee5b69b65d5204fde1da5933534f1439983b4ced620c532a76242b84dbd",
+      "warnings": 1
+    }
+  ],
+  "rss_sample_interval_seconds": 0.002,
+  "seed": 0,
+  "tool_version": "0.1.0"
+}

@@ -1,0 +1,10 @@
+checksum: false
+overlap_policy: first
+redact: true
+anonymize: false
+scan_ports: 20
+scan_window_seconds: 60
+dns_length: 80
+dns_entropy: 4.0
+beacon_min_intervals: 5
+beacon_cv: 0.1

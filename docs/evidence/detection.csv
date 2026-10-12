@@ -1,0 +1,21 @@
+family,threshold,scope,tp,fp,fn,tn,precision,recall,false_positive_rate
+scan,10,"synthetic, case-level",10,5,0,5,0.6666666666666666,1.0,0.5
+scan,20,"synthetic, case-level",10,5,0,5,0.6666666666666666,1.0,0.5
+scan,50,"synthetic, case-level",0,0,10,10,,0.0,0.0
+dns,3.0,"synthetic, case-level",10,0,0,10,1.0,1.0,0.0
+dns,4.0,"synthetic, case-level",10,0,0,10,1.0,1.0,0.0
+dns,5.0,"synthetic, case-level",0,0,10,10,,0.0,0.0
+beacon,0.05,"synthetic, case-level",5,0,5,10,1.0,0.5,0.0
+beacon_jitter,0.05,synthetic jitter=0.0,4,0,0,4,1.0,1.0,0.0
+beacon_jitter,0.05,synthetic jitter=0.1,1,0,2,3,1.0,0.3333333333333333,0.0
+beacon_jitter,0.05,synthetic jitter=0.2,0,0,3,3,,0.0,0.0
+beacon,0.1,"synthetic, case-level",8,0,2,10,1.0,0.8,0.0
+beacon_jitter,0.1,synthetic jitter=0.0,4,0,0,4,1.0,1.0,0.0
+beacon_jitter,0.1,synthetic jitter=0.1,3,0,0,3,1.0,1.0,0.0
+beacon_jitter,0.1,synthetic jitter=0.2,1,0,2,3,1.0,0.3333333333333333,0.0
+beacon,0.3,"synthetic, case-level",10,0,0,10,1.0,1.0,0.0
+beacon_jitter,0.3,synthetic jitter=0.0,4,0,0,4,1.0,1.0,0.0
+beacon_jitter,0.3,synthetic jitter=0.1,3,0,0,3,1.0,1.0,0.0
+beacon_jitter,0.3,synthetic jitter=0.2,3,0,0,3,1.0,1.0,0.0
+arp,,"synthetic, case-level",10,5,0,5,0.6666666666666666,1.0,0.5
+cleartext,,"synthetic, case-level",10,0,0,10,1.0,1.0,0.0

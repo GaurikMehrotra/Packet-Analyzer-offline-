@@ -1,0 +1,29 @@
+name: synthetic-only-validation
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.10', '3.12']
+    env:
+      MPLCONFIGDIR: /tmp/pcaplens-matplotlib
+      XDG_CACHE_HOME: /tmp/pcaplens-cache
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: bash scripts/bootstrap.sh
+      - run: make check test
+      - run: .venv/bin/python scripts/audit_repository.py
+      - name: Verify fixture generation reproduces committed synthetic bytes
+        run: |
+          .venv/bin/python fixtures/generate_fixtures.py
+          git diff --exit-code -- fixtures/
+      - run: make fuzz
+      - run: make wheel
