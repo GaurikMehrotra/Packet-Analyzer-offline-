@@ -5,6 +5,8 @@
 *.yaml text eol=lf
 *.yml text eol=lf
 *.toml text eol=lf
+# Preserve measured CSV bytes for the evidence SHA-256 manifest.
+*.csv -text
 *.pcap binary
 *.pcapng binary
 *.cap binary
